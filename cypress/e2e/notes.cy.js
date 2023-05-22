@@ -25,17 +25,9 @@ describe('test api notes', () => {
 
       it('Add Notes', () => {
 
-        //const inputString = Cypress.env('userToken');
-        //const spaceIndex = inputString.indexOf(' '); // Find the index of the first space
-
-        // Extract the substring starting after the space
-        //const result = inputString.substring(spaceIndex + 1);
-
-        // Output the result to the Cypress console
-        //cy.log(result);
 
         notes.forEach((note) => {
-          console.log(Cypress.env('userToken'));
+
           const inputString = Cypress.env('userToken');
           const ntoken = inputString.substr(inputString.length - 64);
           cy.request({

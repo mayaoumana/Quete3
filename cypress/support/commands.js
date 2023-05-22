@@ -38,8 +38,7 @@ Cypress.Commands.add('loginWithCredentials', () => {
 
       // Store the values as environment variables
       //Cypress.env('userId', id);
-      Cypress.env('userToken', token);
-      console.log( token);
+      Cypress.env('userToken', token)
       });
     });
   });
