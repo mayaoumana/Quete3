@@ -1,0 +1,17 @@
+[
+    {
+      "title": "Note 1",
+      "description": "Description 1",
+      "category": "Home"
+    },
+    {
+      "title": "Note 2",
+      "description": "Description 2",
+      "category": "Work"
+    },
+    {
+        "title": "Note 3",
+        "description": "Description 3",
+        "category": "Work"
+      }
+  ]
