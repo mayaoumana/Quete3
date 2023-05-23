@@ -42,9 +42,10 @@ describe('test api notes', () => {
             headers: {'x-auth-token': ntoken},
             body: note
           }).then((response) => {
+            
             expect(response.status).to.equal(200);
             expect(response.body.success).to.be.true;
-            expect(note.title).to.equal(note.title);
+            expect(response.body.data.title).to.equal(note.title);
             
           
           });
