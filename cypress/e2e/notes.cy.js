@@ -1,3 +1,4 @@
+import { expect } from 'chai';
 import faker from 'faker';
 
 describe('test api notes', () => {
@@ -44,6 +45,7 @@ describe('test api notes', () => {
           }).then((response) => {
             expect(response.status).to.equal(200);
             expect(response.body.success).to.be.true;
+            expect(note.title).to.equal(note.title);
             
           
           });
