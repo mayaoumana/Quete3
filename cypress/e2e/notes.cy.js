@@ -1,3 +1,5 @@
+import faker from 'faker';
+
 describe('test api notes', () => {
       
       let notes;
@@ -8,11 +10,15 @@ describe('test api notes', () => {
       });
     });
 
-    it.skip('Register', () => {
+    it('Register', () => {
+
+        const name = faker.name.findName();
+        const email = faker.internet.email();
+        const password = faker.internet.password();
         cy.request('POST', 'https://practice.expandtesting.com/notes/api/users/register', {   
-        name : "user",
-        email : "user3@mail.com",
-        password : "password" }).then((response) => {
+        name : name,
+        email : email,
+        password : password }).then((response) => {
           expect(response.status).to.equal(201);
         });
       });
@@ -38,6 +44,7 @@ describe('test api notes', () => {
           }).then((response) => {
             expect(response.status).to.equal(200);
             expect(response.body.success).to.be.true;
+            
           
           });
         });
